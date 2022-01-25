@@ -1,48 +1,46 @@
 // Square code
-const squareSide = 5;
-const squarePerimeter = squareSide * 4;
-const squareArea = squareSide * squareSide;
+function squarePerimeter(Side) {
+  if (Side <= 0) {
+    return `El lado del cuadrado debe ser mayor a 0`;
+  }
 
-console.group("==== Cuadrado ====");
-console.log("Lado del cuadrado: " + squareSide + "cm");
-console.log("Perimetro del cuadrado: " + squarePerimeter + "cm");
-console.log("Área de cuadrado: " + squareArea + "cm²");
-console.groupEnd();
+  return Side * 4;
+}
+function squareArea(Side) {
+  if (Side <= 0) {
+    return `El lado del cuadrado debe ser mayor a 0`;
+  }
+
+  return Side * Side;
+}
 
 // Triangle code
+function trianglePerimeter(Side1, Side2, Base) {
+  if (Side1 <= 0 || Side2 <= 0 || Base <= 0) {
+    return `Los dos lados y la base del triangulo deben ser mayor a 0`;
+  }
 
-const triangleSide1 = 6;
-const triangleSide2 = 6;
-const triangleBase = 4;
-const triangleHeight = 5.5;
-const trianglePerimeter = triangleSide1 + triangleSide2 + triangleBase;
-const triangleArea = (triangleBase * triangleHeight) / 2;
+  return Side1 + Side2 + Base;
+}
 
-console.group("==== Triangulo ====");
-console.log(
-  "Los lados del triangulo son " +
-    triangleSide1 +
-    "cm, " +
-    triangleSide2 +
-    "cm, " +
-    triangleBase +
-    "cm"
-);
-console.log("La altura del triangulo: " + triangleHeight + "cm");
-console.log("Perimetro del triangulo: " + trianglePerimeter + "cm");
-console.log("Área del triangulo: " + triangleArea + "cm²");
-console.groupEnd();
+function triangleArea(Base, Height) {
+  if (Base <= 0 || Height <= 0) {
+    return `La base y la altura del triangulo deben ser mayor a 0`;
+  }
+
+  return (Base * Height) / 2;
+}
 
 // Circle code
-const circleRadio = 4;
-const circleDiameter = circleRadio * 2;
-const PI = Math.PI;
-const circlePerimeter = Math.round(circleDiameter * PI);
-const circleArea = Math.round(circleRadio * circleRadio * PI);
+function circleDiameter(Radio) {
+  return Radio * 2;
+}
 
-console.group("==== Circulo ====");
-console.log("Radio del circulo: " + circleRadio + "cm");
-console.log("Diametro del circulo: " + circleDiameter + "cm");
-console.log("Perimetro del circulo: " + circlePerimeter + "cm");
-console.log("Área del circulo: " + circleArea + "cm²");
-console.groupEnd();
+function circlePerimeter(Radio) {
+  const Diameter = circleDiameter(Radio);
+  return Math.round(Diameter * Math.PI);
+}
+
+function circleArea(Radio) {
+  return Math.round(Radio * Radio * Math.PI);
+}
