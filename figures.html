@@ -5,10 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Figures</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main style -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <main>
-      <h1>Figuras Geometricas.</h1>
+      <!-- <header class="hero">
+        <div class="hero-page">
+          <h1 class="hero-title">Figuras Geometricas.</h1>
+          <p class="hero-paragraph">
+            Calcula de manera sencilla las medidas de tus figuras geometricas
+          </p>
+        </div>
+        <div class="hero-bg"></div>
+      </header> -->
+
+      <section class="calculation-figures-main">
+        <ul class="list-figures">
+          <li class="item-figure"><a href="#">Cuadrado</a></li>
+          <li class="item-figure"><a href="#">Circulo</a></li>
+          <li class="item-figure"><a href="#">Triangulo equilátero</a></li>
+          <li class="item-figure"><a href="#">Triangulo isósceles</a></li>
+          <li class="item-figure"><a href="#">Triangulo escaleno</a></li>
+        </ul>
+        <div class="cards-figures-container">
+          <!-- Square -->
+          <article class="card-figure">
+            <h2 class="figure-title">Cuadrado</h2>
+
+            <form class="figure-form" name="square" action="/">
+              <div class="figure-form-measures">
+                <p class="measures-title">Medidas</p>
+
+                <label class="" for="squareSide">
+                  Lado del cuadrado
+                  <input id="squareSide" name="squareSide" type="number" />
+                  cm
+                </label>
+              </div>
+
+              <div class="figure-form-stone">
+                <p class="stone-title">Calcular</p>
+
+                <div class="stone-btn-calculation">
+                  <button
+                    id="square-btn-perimeter"
+                    type="button"
+                    onclick="squarePerimeter()"
+                  >
+                    Perimetro
+                  </button>
+                  <p class="text-result" id="square-result-perimeter"></p>
+                </div>
+                <div class="stone-btn-calculation">
+                  <button
+                    id="square-btn-area"
+                    type="button"
+                    onclick="squareArea()"
+                  >
+                    Área
+                  </button>
+                  <p class="text-result" id="square-result-area"></p>
+                </div>
+              </div>
+            </form>
+          </article>
+          <!-- Circle -->
+          <article class="card-figure">
+            <h2 class="figure-title">Circulo</h2>
+
+            <form class="figure-form" name="circle" action="/">
+              <div class="figure-form-measures">
+                <p class="measures-title">Medidas</p>
+
+                <label class="" for="circleRadio">
+                  Radio
+                  <input id="circleRadio" name="circleRadio" type="number" />
+                  cm
+                </label>
+                <br />
+                <label class="" for="circleDiameter">
+                  Diametro
+                  <input
+                    id="circleDiameter"
+                    name="circleDiameter"
+                    type="number"
+                  />
+                  cm
+                </label>
+              </div>
+
+              <div class="figure-form-stone">
+                <p class="stone-title">Calcular</p>
+
+                <div class="stone-btn-calculation">
+                  <button
+                    id="circle-btn-perimeter"
+                    type="button"
+                    onclick="circlePerimeter()"
+                  >
+                    Perimetro
+                  </button>
+                  <p class="text-result" id="circle-result-perimeter"></p>
+                </div>
+                <div class="stone-btn-calculation">
+                  <button
+                    id="circle-btn-area"
+                    type="button"
+                    onclick="circleArea()"
+                  >
+                    Área
+                  </button>
+                  <p class="text-result" id="circle-result-area"></p>
+                </div>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
     </main>
 
     <!-- Scripts -->

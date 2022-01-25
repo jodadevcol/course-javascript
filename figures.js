@@ -1,17 +1,45 @@
 // Square code
-function squarePerimeter(Side) {
-  if (Side <= 0) {
-    return `El lado del cuadrado debe ser mayor a 0`;
-  }
+function squarePerimeter() {
+  const squareSide = document.getElementById("squareSide").value;
+  const squareResult = document.getElementById("square-result-perimeter");
 
-  return Side * 4;
+  squareResult.innerHTML = squareSide * 4;
+  return;
 }
-function squareArea(Side) {
-  if (Side <= 0) {
-    return `El lado del cuadrado debe ser mayor a 0`;
+
+function squareArea() {
+  const squareSide = document.getElementById("squareSide").value;
+  const squareResult = document.getElementById("square-result-area");
+
+  if (squareSide <= 0) {
+    squareResult.innerHTML = "El lado del cuadrado debe ser mayor a 0";
+    return;
   }
 
-  return Side * Side;
+  squareResult.innerHTML = squareSide * squareSide;
+  return;
+}
+
+// Circle code
+function circleDiameter(Radio) {
+  return Radio * 2;
+}
+
+function circlePerimeter() {
+  const circleRadio = document.getElementById("circleRadio").value;
+  const Diameter = circleDiameter(circleRadio);
+  const circleResult = document.getElementById("circle-result-perimeter");
+
+  circleResult.innerHTML = Math.round(Diameter * Math.PI);
+  return;
+}
+
+function circleArea(Radio) {
+  const circleRadio = document.getElementById("circleRadio").value;
+  const circleResult = document.getElementById("circle-result-area");
+
+  circleResult.innerHTML = Math.round(circleRadio * circleRadio * Math.PI);
+  return;
 }
 
 // Triangle code
@@ -29,18 +57,4 @@ function triangleArea(Base, Height) {
   }
 
   return (Base * Height) / 2;
-}
-
-// Circle code
-function circleDiameter(Radio) {
-  return Radio * 2;
-}
-
-function circlePerimeter(Radio) {
-  const Diameter = circleDiameter(Radio);
-  return Math.round(Diameter * Math.PI);
-}
-
-function circleArea(Radio) {
-  return Math.round(Radio * Radio * Math.PI);
 }

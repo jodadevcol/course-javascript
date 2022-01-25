@@ -1,0 +1,118 @@
+:root {
+  --charcoal: #264653;
+  --persian-green: #2a9d8f;
+  --orange-yellow-crayola: #e9c46a;
+  --sandy-brown: #f4a261;
+  --burnt-slenna: #e76f51;
+  --black: #3f3f3f;
+  --gray-snow: #818181;
+  --white: #ffffff;
+  --white-snow: #e9eef1;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+}
+
+body {
+  /* background-color: var(--white-snow); */
+  /* background-color: var(--orange-yellow-crayola); */
+  background-color: var(--charcoal);
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 40vh;
+}
+.hero-page {
+  width: 90%;
+  max-width: 1400px;
+  padding: 10px;
+  color: var(--white-snow);
+  background-color: var(--persian-green);
+  border-radius: 8px;
+}
+.hero-bg {
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background-image: url("../images/hero-x1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  z-index: -10;
+}
+.calculation-figures-main {
+  display: grid;
+  place-items: center;
+  gap: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.cards-figures-container {
+  /* width: 90%;
+  margin: 0 auto; */
+}
+.card-figure {
+  border: 1px solid transparent;
+  color: var(--white);
+  text-align: center;
+}
+.figure-form-measures {
+  padding: 1em;
+  background-color: var(--persian-green);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.measures-title {
+}
+.figure-form-stone {
+  padding: 1.4em;
+  background-color: var(--burnt-slenna);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.figure-form-stone {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  justify-content: stretch;
+  align-items: center;
+}
+.stone-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.stone-btn-calculation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+}
+.text-result {
+  display: inline;
+  content: " ";
+  width: 90%;
+  height: auto;
+  min-height: 25px;
+  max-height: fit-content;
+  border-bottom: 2px solid var(--white-snow);
+}
