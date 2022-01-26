@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Figures</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main style -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div class="hero-page">
+          <h1 class="hero-title">Calcula tu descuento.</h1>
+        </div>
+        <div class="hero-bg"></div>
+      </header>
+
+      <section class="discounts-main">
+        <form class="discounts-form" action="/" name="discounts">
+          <!-- Price Original -->
+          <div class="section-form">
+            <label for="priceOriginal">
+              Precio actual
+              <br />
+              <input
+                type="number"
+                name="priceOriginal"
+                id="priceOriginal"
+                placeholder="0.0"
+                onchange="changeDiscount()"
+              />
+            </label>
+          </div>
+          <!-- Discount -->
+          <div class="section-form discounts-btn">
+            <label for="discountCustom"> % de descuento </label>
+            <div class="btn-discount-default">
+              <input
+                type="button"
+                value="10%"
+                id="discount1"
+                onclick="updateDiscount(this.value)"
+              />
+              <input
+                type="button"
+                value="20%"
+                id="discount2"
+                onclick="updateDiscount(this.value)"
+              />
+              <input
+                type="button"
+                value="25%"
+                id="discount3"
+                onclick="updateDiscount(this.value)"
+              />
+              <input
+                type="button"
+                value="35%"
+                id="discount4"
+                onclick="updateDiscount(this.value)"
+              />
+            </div>
+            <input
+              type="number"
+              id="discountCustom"
+              placeholder="Custom"
+              max="99"
+              onchange="changeDiscount()"
+            />
+          </div>
+          <!-- Price Total -->
+          <div class="section-form price-total">
+            <p class="result-price" id="result-total-price">0,00</p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="./discounts.js"></script>
+  </body>
+</html>
