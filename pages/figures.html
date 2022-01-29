@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | JavaScript course</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/figures.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-container hero-overlay">
+        <a class="hero-logo logo" href="/">
+          <img
+            class="logo-img"
+            src="../assets/images/logo_transparent.png"
+            alt="Logo JavaScript course"
+          />
+          JavaScript Course
+        </a>
+        <nav class="hero-nav nav-list">
+          <a class="nav-link" href="./figures.html">
+            Taller 1
+            <span class="icon geometry"></span>
+          </a>
+          <a class="nav-link" href="./discounts.html">
+            Taller 2
+            <span class="icon discounts"></span>
+          </a>
+          <a class="nav-link" href="./statistics.html">
+            Taller 3
+            <span class="icon statistics"></span>
+          </a>
+          <a class="nav-link" href="./salary.html">
+            Taller 4
+            <span class="icon salary"></span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="home-container figures-container">
+        <div class="tabs-list-box figures-tabs">
+          <ul class="tab-element-list">
+            <li class="element-list">
+              <a class="link-element" href="#square" data-toggle="tab">
+                Cuadrado
+              </a>
+            </li>
+            <li class="element-list">
+              <a class="link-element" href="#">Circulo</a>
+            </li>
+            <!-- <li class="element-list">
+              <a class="link-element" href="#">Triangulo equilátero</a>
+            </li>
+            <li class="element-list">
+              <a class="link-element" href="#">Triangulo isósceles</a>
+            </li>
+            <li class="element-list">
+              <a class="link-element" href="#">Triangulo escaleno</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="tabs-content-box figures-content">
+          <!-- Square -->
+          <div id="square" class="tab-content card-figure">
+            <h2 class="figure-title">Cuadrado</h2>
+
+            <form class="figure-form" name="square" action="/">
+              <div class="figure-form-measures">
+                <p class="measures-title">Medidas</p>
+
+                <label class="label" for="squareSide">
+                  Lado del cuadrado
+                  <input
+                    class="input"
+                    id="squareSide"
+                    name="squareSide"
+                    type="number"
+                    placeholder="0"
+                  />
+                  cm
+                </label>
+              </div>
+
+              <div class="figure-form-stone">
+                <p class="stone-title">Calcular</p>
+
+                <div class="stone-btn-calculation">
+                  <button
+                    class="btn-form perimeter"
+                    id="square-btn-perimeter"
+                    type="button"
+                    onclick="squarePerimeter()"
+                  >
+                    Perimetro
+                  </button>
+                  <p class="text-result" id="square-result-perimeter"></p>
+                </div>
+                <div class="stone-btn-calculation">
+                  <button
+                    class="btn-form area"
+                    id="square-btn-area"
+                    type="button"
+                    onclick="squareArea()"
+                  >
+                    Área
+                  </button>
+                  <p class="text-result" id="square-result-area"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Circle -->
+          <div class="tab-content card-figure">
+            <h2 class="figure-title">Circulo</h2>
+
+            <form class="figure-form" name="square" action="/">
+              <div class="figure-form-measures">
+                <p class="measures-title">Medidas</p>
+
+                <label class="label" for="squareSide">
+                  Lado del cuadrado
+                  <input
+                    class="input"
+                    id="squareSide"
+                    name="squareSide"
+                    type="number"
+                    placeholder="0"
+                  />
+                  cm
+                </label>
+              </div>
+
+              <div class="figure-form-stone">
+                <p class="stone-title">Calcular</p>
+
+                <div class="stone-btn-calculation">
+                  <button
+                    class="btn-form perimeter"
+                    id="square-btn-perimeter"
+                    type="button"
+                    onclick="squarePerimeter()"
+                  >
+                    Perimetro
+                  </button>
+                  <p class="text-result" id="square-result-perimeter"></p>
+                </div>
+                <div class="stone-btn-calculation">
+                  <button
+                    class="btn-form area"
+                    id="square-btn-area"
+                    type="button"
+                    onclick="squareArea()"
+                  >
+                    Área
+                  </button>
+                  <p class="text-result" id="square-result-area"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

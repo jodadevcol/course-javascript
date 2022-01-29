@@ -1,0 +1,21 @@
+/* 
+ *  Page Discount
+ */
+.discounts-main {
+  display: grid;
+  place-items: center;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+.discounts-form {
+  /* padding: 1.7em 1.4em; */
+  background-color: var(--persian-green);
+  border-radius: 8px;
+}
+.section-form {
+  padding: 1.7em 1.4em;
+}
+.section-form:nth-child(2) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
