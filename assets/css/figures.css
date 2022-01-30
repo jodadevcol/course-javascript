@@ -46,6 +46,7 @@
   height: fit-content;
 }
 .tab-content {
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -58,12 +59,13 @@
   border-radius: 8px;
   opacity: 0;
   transition: all 0.4s ease;
+  z-index: 1040;
 }
 .tab-content.active {
   opacity: 1;
+  display: grid;
 }
 .card-figure {
-  display: grid;
   grid-template-rows: auto 1fr;
   align-items: stretch;
   justify-items: center;
@@ -116,6 +118,7 @@
   width: 180px;
   height: 34px;
   padding: 0.4em 0.2em;
+  text-align: center;
   background-color: #8181813b;
   border-radius: 8px;
 }
@@ -127,6 +130,9 @@
   width: 80px;
   height: 34px;
   padding: 0.4em;
+  font-family: inherit;
+  font-weight: 400;
+  text-align: center;
 }
 .input:focus,
 .input:focus-visible {
@@ -141,6 +147,7 @@
   font-weight: 600;
   color: var(--rich-black);
   border-radius: 8px;
+  cursor: pointer;
   transition: all 0.4s ease;
 }
 .btn-form:hover,

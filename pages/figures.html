@@ -57,12 +57,14 @@
         <div class="tabs-list-box figures-tabs">
           <ul class="tab-element-list">
             <li class="element-list">
+              <a class="link-element" href="#circle" data-toggle="tab"
+                >Circulo</a
+              >
+            </li>
+            <li class="element-list">
               <a class="link-element" href="#square" data-toggle="tab">
                 Cuadrado
               </a>
-            </li>
-            <li class="element-list">
-              <a class="link-element" href="#">Circulo</a>
             </li>
             <!-- <li class="element-list">
               <a class="link-element" href="#">Triangulo equilátero</a>
@@ -76,20 +78,20 @@
           </ul>
         </div>
         <div class="tabs-content-box figures-content">
-          <!-- Square -->
-          <div id="square" class="tab-content card-figure">
-            <h2 class="figure-title">Cuadrado</h2>
+          <!-- Circle -->
+          <div id="circle" class="tab-content card-figure">
+            <h2 class="figure-title">Circulo</h2>
 
-            <form class="figure-form" name="square" action="/">
+            <form class="figure-form" name="circle" action="/">
               <div class="figure-form-measures">
                 <p class="measures-title">Medidas</p>
 
-                <label class="label" for="squareSide">
+                <label class="label" for="circleRadio">
                   Lado del cuadrado
                   <input
                     class="input"
-                    id="squareSide"
-                    name="squareSide"
+                    id="circleRadio"
+                    name="circleRadio"
                     type="number"
                     placeholder="0"
                   />
@@ -103,31 +105,31 @@
                 <div class="stone-btn-calculation">
                   <button
                     class="btn-form perimeter"
-                    id="square-btn-perimeter"
+                    id="circle-btn-perimeter"
                     type="button"
-                    onclick="squarePerimeter()"
+                    onclick="circlePerimeter()"
                   >
                     Perimetro
                   </button>
-                  <p class="text-result" id="square-result-perimeter"></p>
+                  <p class="text-result" id="circle-result-perimeter"></p>
                 </div>
                 <div class="stone-btn-calculation">
                   <button
                     class="btn-form area"
-                    id="square-btn-area"
+                    id="circle-btn-area"
                     type="button"
-                    onclick="squareArea()"
+                    onclick="circleArea()"
                   >
                     Área
                   </button>
-                  <p class="text-result" id="square-result-area"></p>
+                  <p class="text-result" id="circle-result-area"></p>
                 </div>
               </div>
             </form>
           </div>
-          <!-- Circle -->
-          <div class="tab-content card-figure">
-            <h2 class="figure-title">Circulo</h2>
+          <!-- Square -->
+          <div id="square" class="tab-content card-figure">
+            <h2 class="figure-title">Cuadrado</h2>
 
             <form class="figure-form" name="square" action="/">
               <div class="figure-form-measures">
@@ -180,5 +182,6 @@
 
     <!-- Script -->
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/figures.js"></script>
   </body>
 </html>

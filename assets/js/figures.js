@@ -1,9 +1,16 @@
+//Global
+function formatResult(Result, Boolean) {
+  return Boolean
+    ? `${Number(Result.toFixed(2))} cm`
+    : `${Number(Result.toFixed(2))} cm²`;
+}
+
 // Square code
 function squarePerimeter() {
   const squareSide = document.getElementById("squareSide").value;
   const squareResult = document.getElementById("square-result-perimeter");
 
-  squareResult.innerHTML = squareSide * 4;
+  squareResult.innerHTML = formatResult(squareSide * 4, true);
   return;
 }
 
@@ -11,12 +18,7 @@ function squareArea() {
   const squareSide = document.getElementById("squareSide").value;
   const squareResult = document.getElementById("square-result-area");
 
-  if (squareSide <= 0) {
-    squareResult.innerHTML = "El lado del cuadrado debe ser mayor a 0";
-    return;
-  }
-
-  squareResult.innerHTML = squareSide * squareSide;
+  squareResult.innerHTML = formatResult(squareSide * squareSide, false);
   return;
 }
 
@@ -30,15 +32,18 @@ function circlePerimeter() {
   const Diameter = circleDiameter(circleRadio);
   const circleResult = document.getElementById("circle-result-perimeter");
 
-  circleResult.innerHTML = Math.round(Diameter * Math.PI);
+  circleResult.innerHTML = formatResult(Diameter * Math.PI, true);
   return;
 }
 
-function circleArea(Radio) {
+function circleArea() {
   const circleRadio = document.getElementById("circleRadio").value;
   const circleResult = document.getElementById("circle-result-area");
 
-  circleResult.innerHTML = Math.round(circleRadio * circleRadio * Math.PI);
+  circleResult.innerHTML = formatResult(
+    circleRadio * circleRadio * Math.PI,
+    false
+  );
   return;
 }
 
