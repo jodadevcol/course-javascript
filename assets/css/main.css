@@ -142,6 +142,49 @@ main,
   justify-content: center;
   width: 90%;
 }
+/* Inputs and Buttons */
+.text-result {
+  width: 180px;
+  height: 34px;
+  padding: 0.4em 0.2em;
+  text-align: center;
+  background-color: #8181813b;
+  border-radius: 8px;
+}
+.label {
+  font-size: 1em;
+  font-weight: 300;
+}
+.input {
+  width: 80px;
+  height: 34px;
+  padding: 0.4em;
+  font-family: inherit;
+  font-weight: 400;
+  text-align: center;
+}
+.input:focus,
+.input:focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+}
+.btn-form {
+  width: 160px;
+  padding: 0.4em 0.2em;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--rich-black);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.btn-form:hover,
+.btn-form:focus {
+  background-color: var(--orange-yellow-crayola);
+  color: var(--white);
+}
+
 /* Medias */
 @media (min-width: 640px) {
   .hero-container {
